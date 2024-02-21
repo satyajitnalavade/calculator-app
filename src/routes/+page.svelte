@@ -9,7 +9,8 @@
     let isDisplayingResults = false;
   
     const handleOperationClick = (operation: string) => {
-      if (!firstNumber) return;
+      if (!firstNumber && display==="") return;
+      
       if (operation === "=") {
         if (!secondNumber) return;
         const firstNum = parseInt(firstNumber);
@@ -33,6 +34,7 @@
         }
   
         display = results;
+        firstNumber=display;
         isDisplayingResults = true;
       }
       selectedOperation = operation;
