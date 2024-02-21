@@ -35,7 +35,15 @@
   
         display = results;
         firstNumber=display;
+        secondNumber = "";
+        selectedOperation = "";
         isDisplayingResults = true;
+      } else {
+        if (isDisplayingResults) {
+        secondNumber = "";
+        isDisplayingResults = false;
+    }
+
       }
       selectedOperation = operation;
     };
