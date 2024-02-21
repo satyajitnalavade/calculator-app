@@ -13,14 +13,18 @@
       
       if (operation === "=") {
         if (!secondNumber) return;
-        const firstNum = parseInt(firstNumber);
-        const secondNum = parseInt(secondNumber);
+        const firstNum = parseFloat(firstNumber);
+        const secondNum = parseFloat(secondNumber);
   
         let results = "";
   
         switch (selectedOperation) {
           case "/":
+          if (secondNum === 0) {
+            results = "Error: Division by zero";
+          } else {
             results = (firstNum / secondNum).toFixed(2);
+          }
             break;
           case "x":
             results = (firstNum * secondNum).toFixed(2);
